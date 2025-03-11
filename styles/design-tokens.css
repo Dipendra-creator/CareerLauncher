@@ -1,0 +1,110 @@
+/* Design Tokens - Career Platform Style Guide */
+
+:root {
+  /* Color System */
+  
+  /* Primary Purple */
+  --colors-primary-100: hsl(267, 85%, 95%);  /* #F7F2FF */
+  --colors-primary-200: hsl(267, 85%, 90%);  /* #EFE5FF */
+  --colors-primary-300: hsl(267, 85%, 80%);  /* #DFCCFF */
+  --colors-primary-400: hsl(267, 85%, 70%);  /* #CFB3FF */
+  --colors-primary-500: hsl(267, 75%, 60%);  /* #9D4EFF - Main Brand Color */
+  --colors-primary-600: hsl(267, 75%, 50%);  /* #8227FF */
+  --colors-primary-700: hsl(267, 75%, 40%);  /* #6813E6 */
+  --colors-primary-800: hsl(267, 75%, 30%);  /* #4F0FBF */
+  --colors-primary-900: hsl(267, 75%, 20%);  /* #360A99 */
+
+  /* Dark Theme Background Shades */
+  --colors-gray-100: hsl(240, 10%, 95%);     /* #F2F2F5 */
+  --colors-gray-200: hsl(240, 10%, 90%);     /* #E5E5EB */
+  --colors-gray-300: hsl(240, 10%, 80%);     /* #CCCCDB */
+  --colors-gray-400: hsl(240, 10%, 70%);     /* #B2B2C6 */
+  --colors-gray-500: hsl(240, 10%, 60%);     /* #9999B2 */
+  --colors-gray-600: hsl(240, 10%, 50%);     /* #7F7F99 */
+  --colors-gray-700: hsl(240, 10%, 40%);     /* #666680 */
+  --colors-gray-800: hsl(240, 10%, 30%);     /* #4C4C66 */
+  --colors-gray-900: hsl(240, 10%, 20%);     /* #33334C */
+
+  /* Semantic Colors */
+  --colors-success-500: hsl(142, 76%, 36%);  /* #1DB954 */
+  --colors-warning-500: hsl(37, 92%, 50%);   /* #F5A623 */
+  --colors-error-500: hsl(0, 84%, 60%);      /* #FF4D4D */
+  --colors-info-500: hsl(200, 98%, 39%);     /* #0088CC */
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Font Sizes - Following 1.25 Type Scale */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+
+  /* Line Heights */
+  --line-height-tight: 1.25;    /* Headings */
+  --line-height-snug: 1.375;    /* Subheadings */
+  --line-height-normal: 1.5;    /* Body text */
+  --line-height-relaxed: 1.625; /* Long-form content */
+  --line-height-loose: 2;       /* Blog posts */
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing Scale - Based on 4px Grid */
+  --spacing-px: 1px;
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;  /* 4px */
+  --spacing-2: 0.5rem;   /* 8px */
+  --spacing-3: 0.75rem;  /* 12px */
+  --spacing-4: 1rem;     /* 16px */
+  --spacing-5: 1.25rem;  /* 20px */
+  --spacing-6: 1.5rem;   /* 24px */
+  --spacing-8: 2rem;     /* 32px */
+  --spacing-10: 2.5rem;  /* 40px */
+  --spacing-12: 3rem;    /* 48px */
+  --spacing-16: 4rem;    /* 64px */
+  --spacing-20: 5rem;    /* 80px */
+  --spacing-24: 6rem;    /* 96px */
+
+  /* Border Radius */
+  --radius-sm: 0.625rem;   /* 10px */
+  --radius-md: 0.75rem;    /* 12px */
+  --radius-lg: 1rem;       /* 16px */
+  --radius-xl: 1.25rem;    /* 20px */
+  --radius-2xl: 1.5rem;    /* 24px */
+  --radius-3xl: 2rem;      /* 32px */
+  --radius-full: 9999px;
+
+  /* Shadows for Dark Theme */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+
+  /* Transitions */
+  --transition-all: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-transform: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-opacity: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-colors: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                      border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                      color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index Scale */
+  --z-negative: -1;
+  --z-elevate: 1;
+  --z-sticky: 100;
+  --z-drawer: 200;
+  --z-modal: 300;
+  --z-popover: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}

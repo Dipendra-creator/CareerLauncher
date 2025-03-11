@@ -1,0 +1,129 @@
+/* Component Styles */
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium
+         transition-all duration-200 focus-visible:outline-none focus-visible:ring-2
+         focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none
+         disabled:opacity-50 select-none;
+}
+
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary-600 active:bg-primary-700
+         hover:scale-[1.02] active:scale-[0.98];
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80
+         hover:scale-[1.02] active:scale-[0.98];
+}
+
+.btn-outline {
+  @apply border border-input bg-background hover:bg-secondary hover:text-secondary-foreground
+         hover:scale-[1.02] active:scale-[0.98];
+}
+
+.btn-ghost {
+  @apply hover:bg-secondary/50 hover:text-secondary-foreground;
+}
+
+/* Form Controls */
+.form-label {
+  @apply text-sm font-medium leading-none peer-disabled:cursor-not-allowed
+         peer-disabled:opacity-70 text-foreground;
+}
+
+.form-input {
+  @apply flex h-12 w-full rounded-xl border border-input bg-background px-4 py-2 text-sm
+         placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2
+         focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed
+         disabled:opacity-50 transition-all duration-200;
+}
+
+.form-select {
+  @apply flex h-12 w-full items-center justify-between rounded-xl border border-input
+         bg-background px-4 py-2 text-sm placeholder:text-muted-foreground
+         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary
+         focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50
+         transition-all duration-200;
+}
+
+/* Cards */
+.card {
+  @apply rounded-xl border bg-card text-card-foreground shadow-md
+         hover:shadow-lg transition-all duration-200;
+}
+
+.card-header {
+  @apply flex flex-col space-y-1.5 p-6;
+}
+
+.card-content {
+  @apply p-6 pt-0;
+}
+
+.card-footer {
+  @apply flex items-center p-6 pt-0;
+}
+
+/* Glass Card */
+.glass-card {
+  @apply bg-card/80 backdrop-blur-lg border border-white/10 rounded-xl
+         transition-all duration-300 hover:scale-[1.02] hover:border-primary/20;
+}
+
+/* Icons */
+.icon {
+  @apply h-5 w-5 shrink-0 text-muted-foreground transition-colors duration-200;
+}
+
+.icon-sm {
+  @apply h-4 w-4;
+}
+
+.icon-lg {
+  @apply h-6 w-6;
+}
+
+/* Badges */
+.badge {
+  @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold
+         transition-colors focus:outline-none focus:ring-2 focus:ring-primary
+         focus:ring-offset-2;
+}
+
+.badge-primary {
+  @apply border-transparent bg-primary/20 text-primary hover:bg-primary/30;
+}
+
+.badge-secondary {
+  @apply border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80;
+}
+
+.badge-outline {
+  @apply border-primary/20 text-primary hover:bg-primary/10;
+}
+
+/* Tooltips */
+.tooltip {
+  @apply absolute z-50 rounded-lg bg-popover px-3 py-1.5 text-xs text-popover-foreground
+         shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out
+         data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95
+         data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2
+         data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2;
+}
+
+/* Dropdowns */
+.dropdown-content {
+  @apply absolute z-50 min-w-[8rem] overflow-hidden rounded-xl border bg-popover p-1
+         text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95
+         data-[state=closed]:animate-out data-[state=closed]:fade-out-0
+         data-[state=closed]:zoom-out-95;
+}
+
+.dropdown-item {
+  @apply relative flex cursor-default select-none items-center rounded-lg px-2 py-1.5
+         text-sm outline-none transition-colors hover:bg-primary/10 hover:text-primary
+         focus:bg-primary/10 focus:text-primary data-[disabled]:pointer-events-none
+         data-[disabled]:opacity-50;
+}
