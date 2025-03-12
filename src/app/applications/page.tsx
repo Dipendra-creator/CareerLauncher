@@ -13,10 +13,13 @@ import {
   AlertCircle,
   Filter,
   Plus,
-  ChevronRight
+  ChevronRight,
+  CalendarCheck, // Add this
+  Trophy, // Add this
+  type LucideIcon // Add this type import
 } from "lucide-react";
 
-const applications = [
+const applications : any = [
   {
     id: 1,
     company: "Google",
@@ -59,17 +62,34 @@ const applications = [
   }
 ];
 
-const statusColors = {
+const statusColors: any = {
   applied: "text-blue-500",
   interview: "text-yellow-500",
   offered: "text-green-500",
   rejected: "text-red-500"
 };
 
-const statusIcons = {
-  applied: AlertCircle,
-  interview: Clock,
-  offered: CheckCircle2,
+// Add this type definition at the top of your file
+type ApplicationStatus = 'applied' | 'interview' | 'offered' | 'rejected';
+
+// Make sure your application interface includes the correct status type
+interface Application {
+  id: number;
+  company: string;
+  position: string;
+  location: string;
+  status: ApplicationStatus;
+  stage: string;
+  date: string;
+  logo: string;
+}
+
+// Type your statusIcons object
+// The statusIcons definition will now work correctly
+const statusIcons: any = {
+  applied: CheckCircle2,
+  interview: CalendarCheck,
+  offered: Trophy,
   rejected: XCircle
 };
 
@@ -151,7 +171,8 @@ export default function ApplicationsPage() {
 
         {/* Applications List */}
         <div className="space-y-4">
-          {applications.map((application) => {
+          {applications.map((application: any) => {
+            // Now this line will work without type errors
             const StatusIcon = statusIcons[application.status];
             return (
               <Card key={application.id} className="p-6">
